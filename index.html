@@ -586,6 +586,7 @@ for(var I=1 ; I<=N ; I++) //1910  FOR I=1 TO N
   S1=S1-X1; //2040  S1=S1-X1
   S2=S2-X2; //2050  S2=S2-X2
   GOTO2080(); //2060  GOTO 2080
+  return;
   }//2070  NEXT I
 GOTO2080(); return;
 }
@@ -719,7 +720,7 @@ for(var I=1 ; I<=3 ; I++) //2680  FOR I=1 TO 3
   PRINT(H + " UNIT HIT ON KLINGON AT SECTOR " + K[I][1] +','+ K[I][2] +': '+ K[I][3] + ' LEFT'); //2720  PRINT  USING 2730;H,K[I,1],K[I,2],K[I,3]
   //2730  IMAGE  4D," UNIT HIT ON KLINGON AT SECTOR ",D,",",D,"   (",3D," LEFT)"
   if(K[I][3]>0){continue;} //2740  IF K[I,3]>0 THEN 2770
-  GOSUB3690(); //2750  GOSUB 3690
+  GOSUB3690(I); //2750  GOSUB 3690
   if(K9 <= 0) //2760  IF K9 <= 0 THEN 4040
     {//all klingons destroyed
     GOTO4040();
@@ -1110,9 +1111,9 @@ PRINT("COMMAND:"); nextLine = 1270; return; //5320  GOTO 1270
 5310  IF A$ <> "NO" THEN 5280
 */
 
-function GOSUB3690()
+function GOSUB3690(I)
 {//one klingon less
-PRINT("KLINGON AT SECTOR " + K[I,1] + ',' + K[I,2] + " DESTROYED ****"); //3690  PRINT  USING 3700;K[I,1],K[I,2]
+PRINT("KLINGON AT SECTOR " + K[I][1] + ',' + K[I][2] + " DESTROYED ****"); //3690  PRINT  USING 3700;K[I,1],K[I,2]
 //3700  IMAGE  "KLINGON AT SECTOR ",D,",",D," DESTROYED ****"
 K3=K3-1; //3710  K3=K3-1
 K9=K9-1; //3720  K9=K9-1
