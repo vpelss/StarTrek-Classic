@@ -12,7 +12,7 @@ I was surprised to discover almost no (good) ports of the code to JavaScript. Ja
 
 I heard a voice in my head say, 'Thou shalt do this'.
 
-This is a faithful conversion of a StarTrek BASIC program from the early 70's into JavaScript
+This is a faithful conversion of a StarTrek BASIC program from the early 70's into JavaScript. (Disclaimer: I made the universe closed, so you can't fly out of the 8x8 quadrants. Sue me.)
 Yes, it could have been rewritten from scratch, but I wanted to be as faithful to the original as possible
 
 Challenges:
