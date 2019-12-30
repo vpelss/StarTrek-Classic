@@ -609,7 +609,8 @@ if(T>T0+T9) //2150  IF T>T0+T9 THEN 3970
   GOTO3920();
   return;
   }
-GOSUB4120(); PRINT("COMMAND:"); nextLine = 1270; return; //2160  GOTO 1260
+GOSUB4120(); //sr sensors
+PRINT("COMMAND:"); nextLine = 1270; return; //2160  GOTO 1260
 }
 
 function GOTO2170()
@@ -630,6 +631,23 @@ if(S2 == 0) //2260  IF S2 <> 0 THEN 2290
   Q2=Q2-1; //2270  Q2=Q2-1
   S2=8; //2280  S2=8
   }
+//vinman : create a closed universe
+if(Q1<=0)
+ {
+ Q1=8;
+ }
+if(Q2<=0)
+ {
+ Q2=8;
+ }
+if(Q1>=9)
+ {
+ Q1=1;
+ }
+if(Q2>=9)
+ {
+ Q2=1;
+ }
 T=T+1; //2290  T=T+1
 E=E-N+5; //2300  E=E-N+5
 if(T>T0+T9) //2310  IF T>T0+T9 THEN 3970
@@ -1414,7 +1432,7 @@ if(S<0 || E<0)
 //all roads end here
 PRINT("THERE ARE STILL " + K9 + " KLINGON BATTLE CRUISERS");//4020  PRINT "THERE ARE STILL"K9" KLINGON BATTLE CRUISERS"
 PRINT();
-PRINT('To start a new game hit enter');
+PRINT('To start a new game enter any COMMAND');
 nextLine=200; //4030  GOTO 230
 return;
 }
@@ -1431,7 +1449,7 @@ T1 = dt.getTime(); //4090  T1=TIM(0)+TIM(1)*60;
 PRINT("YOUR ACTUAL TIME OF MISSION = " + Math.floor((((T1-T7)*.4)-T7)*100) + " MINUTES" ); //4100  PRINT "YOUR ACTUAL TIME OF MISSION ="INT((((T1-T7)*.4)-T7)*100)" MINUTES"
 
 PRINT();
-PRINT('To start a new game hit enter');
+PRINT('To start a new game enter any COMMAND');
 nextLine=200;
 return;  //4110  GOTO 230
 }
