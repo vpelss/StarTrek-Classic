@@ -899,7 +899,8 @@ return;
 function GOTO3490()
 {
 var yy = E+S;
-PRINT("ENERGY AVAILABLE = " + yy + ".  NUMBER OF UNITS TO SHIELDS:"); //3490  PRINT "ENERGY AVAILABLE ="E+S"   NUMBER OF UNITS TO SHIELDS:";
+PRINT("ENERGY AVAILABLE = " + yy + "."); //3490  PRINT "ENERGY AVAILABLE ="E+S"   NUMBER OF UNITS TO SHIELDS:";
+PRINT("NUMBER OF UNITS TO SHIELDS: ");
 nextLine = 3500; return;
 }
 
@@ -1370,7 +1371,7 @@ if(K3<=0)//3820  IF K3 <= 0 THEN 3910
   {return;}
 for(var I= 1 ; I<=3 ; I++)//3830  FOR I=1 TO 3
   {
-  if(K[I][3] <= 0)//3840  IF K[I,3] <= 0 THEN 3900
+  if(K[I][3] > 0)//3840  IF K[I,3] <= 0 THEN 3900
     {
     var H=(K[I][3]/FND(I))*(2*Math.random()); //3850  H=(K[I,3]/FND(0))*(2*RND(1))
     S=S-H;//3860  S=S-H
