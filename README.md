@@ -14,6 +14,7 @@ This is a faithful conversion of a StarTrek BASIC program from the early 70's in
 Yes, it could have been rewritten from scratch, but I wanted to be as faithful to the original as possible
 
 Challenges:
+
 BASIC pauses at INPUT command. It awaits user input then continues.
 JavaScript cannot pause.
 The DOM can only update when the code has completed.
@@ -33,22 +34,38 @@ If there is a big call stack, because of our many GOTOXXXX calls,
 all the return; commands placed after our GOTOXXXX calls will clean the call stack
 
 some var and function references
+
 D - damage array
+
 FND(D) : distance
+
 K[kingon1-3][x,y,damage]
+
 S1,S2 sector loc
+
 Q1,Q2 quadrant
 
 Line1270() : command loop
+
 Line1410() : course
+
 Line1460() : warp, check damage , check E check S, if K3, fight
+
 Line1610() : needed to keep goto flow working
+
 Line2330() : long range sensors
+
 GOSUB4120() : short range
+
 GOSUB5820() : instructions
+
 GOSUB5380() : random spot chosen in quadrant that is empty
+
 GOSUB5680() : STRING COMPARISON IN QUADRANT ARRAY
+
 GOSUB5510() : insert string in quadrant
+
 GOSUB3790() : klingons attack
+
 GOTO3920() : lose scenarios : was goto
 
