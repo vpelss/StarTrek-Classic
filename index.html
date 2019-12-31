@@ -48,6 +48,21 @@ Your browser does not support the audio element.
 <form action='javascript:void(0);'>
 Commands: <input id="command_box" type="text" autocomplete="off">
 </form>
+  <br>  
+<button onclick="buttonCommands(this.innerHTML)">.</button> 
+<button onclick="buttonCommands(this.innerHTML)">0</button> 
+<button onclick="buttonCommands(this.innerHTML)">1</button>
+<button onclick="buttonCommands(this.innerHTML)">2</button>
+<button onclick="buttonCommands(this.innerHTML)">3</button>
+<button onclick="buttonCommands(this.innerHTML)">4</button>
+<button onclick="buttonCommands(this.innerHTML)">5</button>
+<button onclick="buttonCommands(this.innerHTML)">6</button>
+<button onclick="buttonCommands(this.innerHTML)">7</button>
+<button onclick="buttonCommands(this.innerHTML)">8</button>
+<button onclick="buttonCommands(this.innerHTML)">9</button>
+<button onclick="storeCommand();">Enter</button>
+<button onclick="command_box.value = '';">Clear</button>
+
   <br>
   <br>
   <button onclick="PRINT(instructions); PRINT('COMMAND: ')">Instructions</button>
@@ -60,8 +75,7 @@ Commands: <input id="command_box" type="text" autocomplete="off">
   
 <p class='tocenter'><a href='https://github.com/vpelss/StarTrek-Classic' target='_blank'>Github</a></p>
 <p class='tocenter'><a href='https://www.emogic.com/' target='_blank'>by Emogic</a></p>
-
-  
+ 
 <script>
 var game_area = document.getElementById('game_area'); //set a DOM element for the game area
 var command_box = document.getElementById('command_box'); //set a DOM element for the commands area
@@ -71,6 +85,11 @@ var x = document.getElementById("myAudio");
 function playAudio() { 
   x.play(); 
 } 
+
+function buttonCommands(button)
+{
+command_box.value = command_box.value + button;  
+}
   
 function copyGame(elm) 
 {
