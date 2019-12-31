@@ -339,7 +339,6 @@ GOTO810();return;
 function GOTO810()
 {//entering new quadrant, build it
 K3=B3=S3=0;//810  K3=B3=S3=0
-
 if( !(Q1<1 || Q1>8 || Q2<1 || Q2>8) )//820  IF Q1<1 OR Q1>8 OR Q2<1 OR Q2>8 THEN 920
   {
   X=G[Q1][Q2]*0.01; //830  X=G[Q1,Q2]*.01
@@ -1432,7 +1431,7 @@ if(S<0 || E<0)
 //all roads end here
 PRINT("THERE ARE STILL " + K9 + " KLINGON BATTLE CRUISERS");//4020  PRINT "THERE ARE STILL"K9" KLINGON BATTLE CRUISERS"
 PRINT();
-PRINT('To start a new game enter any COMMAND');
+PRINT('TO START A NEW GAME ENTER ANY COMMAND:');
 nextLine=200; //4030  GOTO 230
 return;
 }
@@ -1446,10 +1445,10 @@ PRINT(); //4070  PRINT
 PRINT("YOUR EFFICIENCY RATING = " + ((K7/(T-T0))*1000) ); //4080  PRINT "YOUR EFFICIENCY RATING ="((K7/(T-T0))*1000)
 T1 = dt.getTime(); //4090  T1=TIM(0)+TIM(1)*60;
 // (T1-T7)/(1000*60)
-PRINT("YOUR ACTUAL TIME OF MISSION = " + Math.floor((((T1-T7)*.4)-T7)*100) + " MINUTES" ); //4100  PRINT "YOUR ACTUAL TIME OF MISSION ="INT((((T1-T7)*.4)-T7)*100)" MINUTES"
+PRINT("YOUR ACTUAL TIME OF MISSION = " + Math.floor((T1-T7)*60/1000) + " MINUTES" ); //4100  PRINT "YOUR ACTUAL TIME OF MISSION ="INT((((T1-T7)*.4)-T7)*100)" MINUTES"
 
 PRINT();
-PRINT('To start a new game enter any COMMAND');
+PRINT('TO START A NEW GAME ENTER ANY COMMAND:');
 nextLine=200;
 return;  //4110  GOTO 230
 }
