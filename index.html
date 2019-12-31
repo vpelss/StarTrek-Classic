@@ -461,11 +461,14 @@ function Line1410()
 C1 = parseInt( globalComandStorage );//1420  INPUT C1
 if(C1==0)//1430  IF C1=0 THEN 1270
   {
+  PRINT("COURSE CANCELLED");  
+  PRINT("COMMAND:"); //1270  PRINT "COMMAND:";
   nextLine = 1270;
   return;
   }
 if(C1<1 || C1>=9)//1440  IF C1<1 OR C1 >= 9 THEN 1410
   {
+  PRINT("COURSE (1-9):");  //1410  PRINT "COURSE (1-9):";
   nextLine=1410;
   return;
   }
