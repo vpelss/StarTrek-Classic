@@ -34,10 +34,22 @@ background-color : black;
 </head>
 <body>
 <!--
-  https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
-  -->  
-<H4>Star Trek Classic : BASIC</H4><span>
-
+https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
+-->  
+<table cellpadding='0' cellspacing='0' border=0>
+  <tr>
+    <td>
+    <div class="lcars-elbow left-bottom" ><a></a></div>
+    </td>
+    <td valign='top'>
+    <div class='lcars-bar horizontal'><b><i>Star Trek Classic : Basic</i></b></div>  
+    </td>
+    <td valign='top'>
+    <div class='lcars-bar horizontal right-end '></div>  
+    </td>
+  </tr>
+</table>
+                 
   <audio id='myAudio'>
   <source src="https://www.emogic.com/TypingTutor/space.mp3" type="audio/wav">
 Your browser does not support the audio element.
@@ -52,40 +64,42 @@ Your browser does not support the audio element.
           THE USS ENTERPRISE --- NCC-1701
 </pre>
 
-  <div id='game_area'></div>
+  <div id='game_area' class='lcars-text-box w100'></div>
 <form action='javascript:void(0);'>
 Commands: <input id="command_box" type="text" autocomplete="off">
 </form>
   <br>  
   
-  <!--http://joernweissenborn.github.io/lcars/-->
+<!--
+http://joernweissenborn.github.io/lcars/
+https://github.com/joernweissenborn/lcars
+-->
 <div class="lcars-column lcars-u-2 w100">
     <div class="lcars-bracket top hollow"></div>
 		  <div class="lcars-row">
 			  <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">.</div>
 				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">1</div>
 				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">2</div>
-				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">3</div>
-				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">4</div>
-				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">5</div>						
-         <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">6</div>
-         <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">7</div>
-				 <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">8</div>
-         <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">9</div>
-				 <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">0</div>
+				<div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">3</div>
+				<div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">4</div>
+				<div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">5</div>						
+         <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">6</div>
+         <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">7</div>
+				 <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">8</div>
+         <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">9</div>
+				 <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">0</div>
 				 <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="storeCommand();">Enter</div>
 				 <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick=" game_area.innerHTML ='';">Clear</div>
-        </div>
-    
-       <div class="lcars-row">
-			  <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="PRINT(instructions); PRINT('COMMAND: ')">Instructions</div>
-				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="copyGame(game_area)">Copy Game Record</div>
-				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="game_area.innerHTML='';">Clear Screen</div>    
-				<div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="playAudio('Space');">Space</div>    
-       </div>
-       
+        </div>       
 			<div class="lcars-bracket bottom hollow"></div>
 		</div>
+&nbsp;
+    <div class="lcars-row">
+			  <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="PRINT(instructions); PRINT('COMMAND: ')">Instructions</div>
+				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="copyGame(game_area)">Copy Game Record</div>
+				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="game_area.innerHTML='';">Clear Screen</div>    
+				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="playAudio('Space');">Space</div>    
+       </div>
 
 <!--
 <button onclick="buttonCommands(this.innerHTML)">.</button> 
