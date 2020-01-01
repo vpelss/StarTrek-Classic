@@ -29,10 +29,24 @@ background-color : black;
   {
   width:100%;  
   }
+  
+#zoom_container {
+  width: 1000px;
+  height: 120px;
+  left : -500px;
+  position: relative;
+  /* background: yellow; */
+}
+#zoom_space {
+  /* width: 50px;
+  height: 50px; 
+  background-color: red; */
+  position: absolute;  
+}
 </style>
   
 </head>
-<body>
+<body onload='myMove();'>
 <!--
 https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
 -->  
@@ -54,15 +68,9 @@ https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
   <source src="https://www.emogic.com/TypingTutor/space.mp3" type="audio/wav">
 Your browser does not support the audio element.
 </audio>
-  
-<pre>
-                          ,------*------,
-          ,-------------   '---  ------'
-           '-------- --'      / /
-               ,---' '-------/ /--,
-               '----------------'
-          THE USS ENTERPRISE --- NCC-1701
-</pre>
+<div id='zoom_container'>
+<pre id='zoom_space'></pre>
+</div>  
 
   <div id='game_area' class='lcars-text-box w100'></div>
 <form action='javascript:void(0);'>
@@ -101,35 +109,12 @@ https://github.com/joernweissenborn/lcars
 				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="playAudio('Space');">Space</div>    
        </div>
 
-<!--
-<button onclick="buttonCommands(this.innerHTML)">.</button> 
-<button onclick="buttonCommands(this.innerHTML)">1</button>
-<button onclick="buttonCommands(this.innerHTML)">2</button>
-<button onclick="buttonCommands(this.innerHTML)">3</button>
-<button onclick="buttonCommands(this.innerHTML)">4</button>
-<button onclick="buttonCommands(this.innerHTML)">5</button>
-<button onclick="buttonCommands(this.innerHTML)">6</button>
-<button onclick="buttonCommands(this.innerHTML)">7</button>
-<button onclick="buttonCommands(this.innerHTML)">8</button>
-<button onclick="buttonCommands(this.innerHTML)">9</button>
-<button onclick="buttonCommands(this.innerHTML)">0</button> 
-<button onclick="storeCommand();">Enter</button>
-<button onclick="command_box.value = '';">Clear</button>
-  <br>
-  <br>
-  <button onclick="PRINT(instructions); PRINT('COMMAND: ')">Instructions</button>
-&nbsp;&nbsp;&nbsp;
-    <button onclick="copyGame(game_area)">Copy Game Record</button>
-&nbsp;&nbsp;&nbsp;
-  <button onclick=" game_area.innerHTML =''; ">Clear Screen</button>
-&nbsp;&nbsp;&nbsp;
-<input type="button" value='Space' onclick='playAudio("space");'> 
--->
-
 <p class='tocenter'><a href='https://github.com/vpelss/StarTrek-Classic' target='_blank'>Github</a></p>
 <p class='tocenter'><a href='https://www.emogic.com/' target='_blank'>by Emogic</a></p>
  
 <script>
+var zoom_space = document.getElementById('zoom_space'); //set a DOM element for the zoom_space
+var zoom_container = document.getElementById('zoom_container'); //set a DOM element for the zoom_container
 var game_area = document.getElementById('game_area'); //set a DOM element for the game area
 var command_box = document.getElementById('command_box'); //set a DOM element for the commands area
 command_box.focus();
@@ -1592,6 +1577,36 @@ COMMAND 7 = LIBRARY COMPUTER
      GIVES TRAJECTORY AND DISTANCE BETWEEN THE ENTERPRISE
      AND ALL KLINGONS IN YOUR QUADRANT 
 `;
+  
+var enterprise = `
+                ,------*------,
+,-------------,  '---  ------'
+ '-------- --'      / /
+     ,---' '-------/ /--,
+     '-----------------'
+THE USS ENTERPRISE --- NCC-1701
+
+`;
+  
+zoom_space.innerHTML = enterprise;
+function myMove() 
+{
+var pos = 0;
+var id = setInterval(frame, 5);
+function frame() {
+    if (pos == 1500) {
+      clearInterval(id);
+      //zoom_container.style.height = '0px';
+      zoom_container.style.display = 'none';
+      //zoom_container.parentNode.removeChild(zoom_container);
+    } else {
+      pos = pos+ 2; 
+      //elem.style.top = pos + "px"; 
+      zoom_space.style.left = pos + "px"; 
+    }
+  }
+}
+
 </script>
 </body>
 </html>
