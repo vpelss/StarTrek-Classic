@@ -31,17 +31,18 @@ background-color : black;
   }
   
 #zoom_container {
-  width: 100vw;
-  height: 120px;
-  left : -500px;
+  width: 100%;
+  height: 120px; 
   position: relative;
+  overflow: hidden;  
+  display: none;
   /* background: yellow; */
 }
 #zoom_space {
   /* width: 50px;
   height: 50px; 
   background-color: red; */
-  position: absolute;  
+  position: absolute;    
 }
 </style>
   
@@ -102,13 +103,15 @@ https://github.com/joernweissenborn/lcars
 			<div class="lcars-bracket bottom hollow"></div>
 		</div>
 &nbsp;
-    <div class="lcars-row">
+<div class="lcars-row">
 			  <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="PRINT(instructions); PRINT('COMMAND: ')">Instructions</div>
 				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="copyGame(game_area)">Record Game</div>
+</div>&nbsp;
+  &nbsp;
+<div class="lcars-row">
 				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="game_area.innerHTML='';">Clear Screen</div>    
 				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="playAudio('Space');">Space</div>    
-       </div>
-
+</div>
 <p class='tocenter'><a href='https://github.com/vpelss/StarTrek-Classic' target='_blank'>Github</a></p>
 <p class='tocenter'><a href='https://www.emogic.com/' target='_blank'>by Emogic</a></p>
  
@@ -1588,24 +1591,32 @@ THE USS ENTERPRISE --- NCC-1701
 
 `;
   
-zoom_space.innerHTML = enterprise;
 function myMove() 
 {
-var pos = 0;
-var id = setInterval(frame, 5);
-function frame() {
-    if (pos == 2500) {
-      clearInterval(id);
-      //zoom_container.style.height = '0px';
-      zoom_container.style.display = 'none';
-      //zoom_container.parentNode.removeChild(zoom_container);
-    } else {
-      pos = pos+ 2; 
-      //elem.style.top = pos + "px"; 
-      zoom_space.style.left = pos + "px"; 
+zoom_space.innerHTML = enterprise;
+zoom_container.style.display = 'block';  
+var ship_width = zoom_space.offsetWidth;
+var ship_height = zoom_space.offsetHeight;
+var pos = -ship_width;
+var end = window.innerWidth + ship_width;
+zoom_space.style.left = pos;
+//zoom_space.style.height = ship_height;
+var id = setInterval(frame, 5);   
+ function frame() 
+  {
+  if (pos == end) 
+    {
+    clearInterval(id);
+    zoom_container.style.display = 'none';
+    } 
+  else 
+    {
+    pos = pos+ 2; 
+    zoom_space.style.left = pos + "px"; 
     }
-  }
+ }
 }
+
 
 </script>
 </body>
