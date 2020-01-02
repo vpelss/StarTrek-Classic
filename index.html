@@ -34,6 +34,13 @@ width:100%;
 {
 font-size:calc(8px + .8vw);  
 }
+
+.my_border
+{
+ border-style: solid;
+ border-width: 1px;  
+ border-color: black;
+}
   
 #zoom_container 
 {
@@ -64,12 +71,12 @@ https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
     <td valign='top' width='100%'>
     <div class='lcars-bar horizontal'><b><i>Star Trek Classic : Basic</i></b></div>
       <div class="lcars-row sizable_font">
-			  <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="PRINT(instructions); PRINT('COMMAND: ')">Manual</div>
-				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="playAudio('Space');">Space</div>          
+			  <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="PRINT(instructions); PRINT('COMMAND: ')">Manual</div>
+				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="playAudio('Space');">Space</div>          
       </div>
       <div class="lcars-row sizable_font">
-<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="copyGame(game_area)">Record</div>      
-      <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100" onclick="game_area.innerHTML='';">Clear</div>    
+<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="copyGame(game_area)">Record</div>      
+      <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="game_area.innerHTML='';">Clear</div>    
       </div>
     </td>
     <td valign='top'>
