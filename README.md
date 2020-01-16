@@ -35,6 +35,10 @@ As stated before, to simulate INPUT, we return from and stop all JS code.
 If there is a big call stack, because of our many GOTOXXXX calls,
 all the return; commands placed after our GOTOXXXX calls will clean the call stack
 
+I soon needed to create multidimensional arrays. Basic uses a simple G= DIM[7,9,3] format creating an array called G, with dimensions of 7x9x3. JavaScript, oddly enough, does not have an easy, built in, way to create an array like BASIC. So I had to code a JavaScript version of DIM using a recursive function. 
+
+-------------------------------
+
 some var and function references
 
 D - damage array
