@@ -1,5 +1,3 @@
-## Welcome to GitHub Pages
-
 ![Image](StarTrekClassic.png)
 
 You can use the [editor on GitHub](https://github.com/vpelss/StarTrek-Classic/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
