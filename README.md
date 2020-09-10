@@ -1,6 +1,8 @@
 # StarTrek-Classic
 StarTrek Classic
 
+This is a line for line conversion from one of the many 70’s BASIC version of Star Terk into JavaScript.
+
 I love finding projects I am passionate about.
 A friend was showing off all his Star Trek games which reminded me of one of the very first computer Star Trek games.  I remember playing it on the PET computer. It was written in BASIC.
 
