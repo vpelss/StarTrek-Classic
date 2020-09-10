@@ -1,7 +1,7 @@
 This is a line for line concersion from a 70's BASIC version of Star Terk to JavaScript.
 
 It is running at:
-https://www.somewhereincanada.com/games/StarTrek_Classic/
+[Link](https://www.somewhereincanada.com/games/StarTrek_Classic/)
 
 ![StarTrekClassic](StarTrekClassic.png)
 
