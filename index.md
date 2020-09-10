@@ -1,3 +1,8 @@
+This is a line for line concersion from a 70's BASIC version of Star Terk to JavaScript.
+
+It is running at:
+https://www.somewhereincanada.com/games/StarTrek_Classic/
+
 ![StarTrekClassic](StarTrekClassic.png)
 
 You can use the [editor on GitHub](https://github.com/vpelss/StarTrek-Classic/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
