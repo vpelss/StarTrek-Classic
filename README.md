@@ -2,7 +2,7 @@
 StarTrek Classic
 
 Play it here:
-https://www.somewhereincanada.com/games/StarTrek_Classic/
+https://www.emogic.com/games/StarTrek_Classic/
 
 This is a line for line conversion from one of the many 70’s BASIC version of Star Trek into JavaScript.
 
