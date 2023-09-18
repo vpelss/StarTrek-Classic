@@ -258,11 +258,13 @@ let localArrayOfDimensions =  arrayOfDimensions.slice(); //must copy array as sc
 let returnArray = [];
 if (localArrayOfDimensions.length === 0) //no more dimensions
   {
-  return theValue;
-  if(typeof theValue === undefined)
-    {return undefined;}
-  else
-    {return theValue;}
+  return theValue; //for variables , string or number value only
+  //return JSON.parse(JSON.stringify(theValue)); //copy the value, not the pointer if an array or object
+	  
+//if(typeof theValue === undefined)
+  //  {return undefined;}
+  //else
+    //{return theValue;}
   }
 let arraySize = localArrayOfDimensions.shift(); // size of current dimension
 for (let arrayPointer = 0 ; arrayPointer < arraySize ; arrayPointer++)
