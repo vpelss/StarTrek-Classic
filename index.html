@@ -1,11 +1,22 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en" >
+
 <head>
-<meta name="description" content="Star Trek Classic">
+  <meta charset="UTF-8">
+  
+  
+  
+
+  <title>Star Trek Classic</title>
+
+    <link rel="canonical" href="https://codepen.io/vpelss/pen/LYNgwqK">
+  <meta name="description" content="Star Trek Classic">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Star Trek Classic : BASIC</title>
-<link rel="stylesheet" type="text/css" href="https://www.emogic.com/games/StarTrek_Classic/lcars.css">
+  
+  <link rel='stylesheet' href='https://www.emogic.com/games/StarTrek_Classic/lcars.css'>
   
 <style>
 body
@@ -55,11 +66,17 @@ display: none;
 position: absolute;    
 }
 </style>
-<script>
 
-</script>  
+  
+  
+  
 </head>
+
 <body>
+  <!--
+to do
+changing class images for key function in keys 
+-->
 <!--
 https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
 -->  
@@ -87,7 +104,7 @@ https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
 </table>
                  
   <audio id='myAudio'>
-  <source src="https://www.emogic.com/mine/TypingTutor/space.mp3" type="audio/wav">
+  <source src="https://www.emogic.com/TypingTutor/space.mp3" type="audio/wav">
 Your browser does not support the audio element.
 </audio>
 <div id='zoom_container'>
@@ -174,8 +191,8 @@ https://github.com/joernweissenborn/lcars
 
 <p class='tocenter'><a href='https://github.com/vpelss/StarTrek-Classic' target='_blank'>Github</a></p>
 <p class='tocenter'><a href='https://www.emogic.com/' target='_blank'>by Emogic</a></p>
- 
-<script>
+  
+      <script id="rendered-js" >
 var zoom_space = document.getElementById('zoom_space'); //set a DOM element for the zoom_space
 var zoom_container = document.getElementById('zoom_container'); //set a DOM element for the zoom_container
 var game_area = document.getElementById('game_area'); //set a DOM element for the game area
@@ -257,13 +274,11 @@ let localArrayOfDimensions =  arrayOfDimensions.slice(); //must copy array as sc
 let returnArray = [];
 if (localArrayOfDimensions.length === 0) //no more dimensions
   {
-  return theValue; //for variables , string or number value only
-  //return JSON.parse(JSON.stringify(theValue)); //copy the value, not the pointer if an array or object
-	  
-//if(typeof theValue === undefined)
-  //  {return undefined;}
-  //else
-    //{return theValue;}
+  return theValue;
+  if(typeof theValue === undefined)
+    {return undefined;}
+  else
+    {return theValue;}
   }
 let arraySize = localArrayOfDimensions.shift(); // size of current dimension
 for (let arrayPointer = 0 ; arrayPointer < arraySize ; arrayPointer++)
@@ -1605,7 +1620,10 @@ var id = setInterval(frame, 5);
     }
  }
 }  
-myMove();  
-</script>
+myMove();
+    </script>
+
+  
 </body>
+
 </html>
