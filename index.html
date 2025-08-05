@@ -79,36 +79,41 @@ changing class images for key function in keys
 -->
 <!--
 https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)</br>
--->  
+-->
+<!--
+http://joernweissenborn.github.io/lcars/
+https://github.com/joernweissenborn/lcars
+-->
+
 <table cellpadding='0' cellspacing='0' border=0 width='100%'>
   <tr>
     <td valign='top'>
-    <div class="lcars-elbow left-bottom" ><a></a></div>
-    <div class="lcars-text-box lcars-golden-tanoi-bg" >&nbsp;</div>
+      <div class="lcars-elbow left-bottom"><a></a></div>
+      <div class="lcars-text-box lcars-golden-tanoi-bg">&nbsp;</div>
     </td>
     <td valign='top' width='100%'>
-    <div class='lcars-bar horizontal'><b><i>Star Trek Classic : Basic</i></b></div>
+      <div class='lcars-bar horizontal'><b><i>Star Trek Classic : Basic</i></b></div>
       <div class="lcars-row sizable_font">
-			  <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="GOSUB5820(); PRINT('COMMAND: ')">Manual</div>
-				<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="playAudio('Space');">Space</div>          
+        <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="GOSUB5820(); PRINT('COMMAND: ')">Manual</div>
+        <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="playAudio('Space');">Space</div>
       </div>
       <div class="lcars-row sizable_font">
-<div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="copyGame(game_area)">Record</div>      
-      <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="game_area.innerHTML='';">Clear</div>    
+        <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="copyGame(game_area)">Record</div>
+        <div class="lcars-element rounded lcars-dodger-blue-bg lcars-text-box w100 my_border" onclick="game_area.innerHTML='';">Clear</div>
       </div>
     </td>
     <td valign='top'>
-    <div class='lcars-bar horizontal right-end '></div>  
+      <div class='lcars-bar horizontal right-end '></div>
     </td>
   </tr>
 </table>
-                 
-  <audio id='myAudio'>
-  <source src="https://www.emogic.com/TypingTutor/space.mp3" type="audio/wav">
-Your browser does not support the audio element.
+
+<audio id='myAudio'>
+  <source src="https://www.emogic.com/mine/TypingTutor/space.mp3" type="audio/wav">
+  Your browser does not support the audio element.
 </audio>
 <div id='zoom_container'>
-<pre id='zoom_space'>
+  <pre id='zoom_space'>
                 ,------*------,
 ,-------------,  '---  ------'
  '-------- --'      / /
@@ -116,47 +121,49 @@ Your browser does not support the audio element.
      '-----------------'
 THE USS ENTERPRISE --- NCC-1701
 </pre>
-</div>  
+</div>
 
-  <div id='game_area' class='lcars-text-box w100'></div>
+<div id='game_area' class='lcars-text-box w100'></div>
 <form action='javascript:void(0);'>
-Commands: <input id="command_box" type="text" autocomplete="off">
+  Commands: <input id="command_box" type="text" autocomplete="off">
 </form>
- 
-<!--
-http://joernweissenborn.github.io/lcars/
-https://github.com/joernweissenborn/lcars
--->
+
 <div class="lcars-column lcars-u-2 w100">
-    <div class="lcars-bracket top hollow"></div>
-		  <div class="lcars-row">
-			  <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">.</div>
-				<div title='COMMAND 1 = SHORT RANGE SENSOR SCAN
+  <div class="lcars-bracket top hollow"></div>
+  <div class="lcars-row">
+    <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">.</div>
+
+    <div title='COMMAND 1 = SHORT RANGE SENSOR SCAN
   PRINTS THE QUADRANT YOU ARE CURRENTLY IN, INCLUDING
   STARS, KLINGONS, STARBASES, AND THE ENTERPRISE; ALONG
   WITH OTHER PERTINATE INFORMATION.' class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">1</div>
-				<div title='COMMAND 2 = LONG RANGE SENSOR SCAN
+
+    <div title='COMMAND 2 = LONG RANGE SENSOR SCAN
   SHOWS CONDITIONS IN SPACE FOR ONE QUADRANT ON EACH SIDE
   OF THE ENTERPRISE IN THE MIDDLE OF THE SCAN.  THE SCAN
   IS CODED IN THE FORM XXX, WHERE THE UNITS DIGIT IS THE
   NUMBER OF STARS, THE TENS DIGIT IS THE NUMBER OF STAR-
   BASES, THE HUNDREDS DIGIT IS THE NUMBER OF KLINGONS.' class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">2</div>
-				<div title='COMMAND 3 = PHASER CONTROL ALLOWS YOU TO DESTROY THE KLINGONS BY HITTING HIM WITH SUITABLY LARGE NUMBERS OF ENERGY UNITS TO DEPLETE HIS SHIELD POWER.  KEEP IN MIND THAT WHEN YOU SHOOT AT HIM, HE GONNA DO IT TO YOU TOO.' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">3</div>
-				<div title='COMMAND 4 = PHOTON TORPEDO CONTROL
+
+    <div title='COMMAND 3 = PHASER CONTROL ALLOWS YOU TO DESTROY THE KLINGONS BY HITTING HIM WITH SUITABLY LARGE NUMBERS OF ENERGY UNITS TO DEPLETE HIS SHIELD POWER.  KEEP IN MIND THAT WHEN YOU SHOOT AT HIM, HE GONNA DO IT TO YOU TOO.' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">3</div>
+
+    <div title='COMMAND 4 = PHOTON TORPEDO CONTROL
   COURSE IS THE SAME AS USED IN WARP ENGINE CONTROL
   IF YOU HIT THE KLINGON, HE IS DESTROYED AND CANNOT FIRE
   BACK AT YOU.  IF YOU MISS, HE WILL SHOOT HIS PHASERS AT
   YOU.
    NOTE: THE LIBRARY COMPUTER (COMMAND 7) HAS AN OPTION
    TO COMPUTE TORPEDO TRAJECTORY FOR YOU (OPTION 2).' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">4</div>
-				<div title='COMMAND 5 = SHIELD CONTROL
+
+    <div title='COMMAND 5 = SHIELD CONTROL
   DEFINES NUMBER OF ENERGY UNITS TO BE ASSIGNED TO SHIELDS
-  ENERGY IS TAKEN FROM TOTAL SHIPS ENERGY.' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">5</div>						
-         <div title='COMMAND 6 = DAMAGE CONTROL REPORT
+  ENERGY IS TAKEN FROM TOTAL SHIPS ENERGY.' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">5</div>
+    <div title='COMMAND 6 = DAMAGE CONTROL REPORT
   GIVES STATE OF REPAIRS OF ALL DEVICES.  A STATE OF REPAIR
   LESS THAN ZERO SHOWS THAT THAT DEVICE IS TEMPORARALY
   DAMAGED.' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">6</div>
-         <div title='COMMAND 7 = LIBRARY COMPUTER
+
+    <div title='COMMAND 7 = LIBRARY COMPUTER
   THE LIBRARY COMPUTER CONTAINS THREE OPTIONS:
     OPTION 0 = CUMULATIVE GALACTIC RECORD
      SHOWS COMPUTER MEMORY OF THE RESULTS OF ALL PREVIOUS
@@ -167,9 +174,12 @@ https://github.com/joernweissenborn/lcars
     OPTION 2 = PHOTON TORPEDO DATA
      GIVES TRAJECTORY AND DISTANCE BETWEEN THE ENTERPRISE
      AND ALL KLINGONS IN YOUR QUADRANT' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">7</div>
-				 <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">8</div>
-         <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">9</div>
-				 <div title='COMMAND 0 = WARP ENGINE CONTROL
+
+    <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">8</div>
+
+    <div class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">9</div>
+
+    <div title='COMMAND 0 = WARP ENGINE CONTROL
   "COURSE" IS IN A CIRCULAR NUMERICAL          4  3  2
   VECTOR ARRANGEMENT AS SHOWN.                  \ ^ /
       INTERGER AND REAL VALUES MAY BE                \^/
@@ -183,11 +193,11 @@ https://github.com/joernweissenborn/lcars
   ONE QUADRANT.  THEREFORE TO GET
   FROM QUADRANT 6,5 TO 5,5 YOU WOULD
   USE COURSE 3, WARP FACTOR 1' class="lcars-element  lcars-dodger-blue-bg lcars-text-box w100" onclick="buttonCommands(this.innerHTML)">0</div>
-				 <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="storeCommand();">Enter</div>
-				 <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick=" command_box.value ='';">Clear</div>
-        </div>       
-			<div class="lcars-bracket bottom hollow"></div>
-		</div>
+    <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick="storeCommand();">Enter</div>
+    <div class="lcars-element lcars-dodger-blue-bg lcars-text-box w100" onclick=" command_box.value ='';">Clear</div>
+  </div>
+  <div class="lcars-bracket bottom hollow"></div>
+</div>
 
 <p class='tocenter'><a href='https://github.com/vpelss/StarTrek-Classic' target='_blank'>Github</a></p>
 <p class='tocenter'><a href='https://www.emogic.com/' target='_blank'>by Emogic</a></p>
