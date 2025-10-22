@@ -4,6 +4,8 @@ StarTrek Classic
 Play it here:
 https://vpelss.github.io/StarTrek-Classic/
 
+also here: https://codepen.io/vpelss/pen/LYNgwqK
+
 This is a line for line conversion from one of the many 70’s BASIC version of Star Trek into JavaScript.
 
 I love finding projects I am passionate about.
