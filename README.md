@@ -9,7 +9,8 @@ This is a line for line conversion from one of the many 70’s BASIC version of 
 I love finding projects I am passionate about.
 A friend was showing off all his Star Trek games which reminded me of one of the very first computer Star Trek games.  I remember playing it on the PET computer. It was written in BASIC.
 
-[https//:en.wikipedia.org/wiki/Star_Trek_(1971_video_game)]
+[]
+[GitHub Pages](https//:en.wikipedia.org/wiki/Star_Trek_(1971_video_game))
 
 https://www.youtube.com/watch?v=e6f9_9kzuzk
 
