@@ -38,9 +38,8 @@ The JS code in Line1270() is equivalent to what would have been at basic line 12
 These functions are called by switch_board(nextLine).
 
 The BASIC GOTO command is a menace. It makes it easy to write poorly structured code.
-In some cases, where a GOTO was called from only one line, it could be converted to inline code.
-In cases where the GOTO was called from multiple lines I hat to create GOTO gunctions.
-GOTO can be simulated with something similar to GOTO6543();
+In some cases, where a GOTO was called from only one line, the GOTO could be removed and converted to inline code.
+In cases where the GOTO was called from multiple lines I had to create GOTO functions. eg: GOTO6543()
 
 I soon needed to create multidimensional arrays. Basic uses a simple G= DIM[7,9,3] format creating an array called G, with dimensions of 7x9x3. JavaScript, oddly enough, does not have an easy, built in, way to create an array like BASIC. So I had to code a JavaScript version of DIM using a recursive function. 
 
