@@ -28,7 +28,7 @@ Challenges:
 BASIC pauses at INPUT command. It awaits user input then continues.
 JavaScript cannot pause.
 The DOM can only update when the code has completed.
-Input can only come from a text box event, which starts the JS running code again.
+With JS, text input can only come from a text box event, which starts the JS running code again.
 
 To simulate / mimic the BASIC INPUT command, we end our code in JS just before the BASIC input code while also setting a 'nextLine' variable. var 'nextLine' indicates where the code should resume after a user input event
 nextLine = 1270; return; (or equivalent) accomplishes this
