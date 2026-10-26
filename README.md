@@ -31,16 +31,11 @@ The DOM can only update when the code has completed.
 With JS, text input can only come from a text box event, which starts the JS running code again.
 
 To simulate / mimic the BASIC INPUT command, we set a 'nextLine' variable. 'nextLine' indicates where the code should resume after a user input text event. 
-I have created functions called Line1270() (etc). The JS code in Line1270() is equivalent to what would have been at basic line 1270, right after the BASIC INPUT command. 
-function switch_board(lineNumber) is called after all JS input text event. 
-So in function storeCommand() we set the text input to a global variable then call switch_board(nextLine) to resume our code and process this input.
-
-
-nextLine = 1270; return; (or equivalent) accomplishes this.
-A user input event will store the user input in a variable 'globalComandStorage'. Then we call the function switch_board() which looks at nextLine and then calls function Line'nextLine'()
-Code runs again until we require user input.
-
-
+After all JS input text events storeCommand() is called. 
+It sets the text input to a global variable then calls switch_board(nextLine) to resume our code and process this input.
+For all BASIC code after BASIC INPUT commands, I have created functions called Line1270() (etc). 
+The JS code in Line1270() is equivalent to what would have been at basic line 1270, right after the previous BASIC INPUT command. 
+These functions are called by switch_board(nextLine).
 
 
 
